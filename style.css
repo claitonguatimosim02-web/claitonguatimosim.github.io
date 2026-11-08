@@ -223,14 +223,28 @@ input { font: inherit; padding: .65rem .8rem; border: 1px solid var(--linha); bo
 
 /* ---------- Celular ---------- */
 @media (max-width: 700px) {
-  .hero { padding: 4rem 1.25rem; }
+  .hero { padding: 2.5rem 1.25rem; }
   .cookies { flex-direction: column; align-items: stretch; }
-   .topo {
-    flex-direction: row;              /* no celular, volta a ficar em linha */
-    justify-content: space-between;   /* logo à esquerda, botão "Menu" à direita */
-  }
+  .barra-topo { flex-wrap: wrap; justify-content: center; font-size: .8rem; }
+
+  /* logo menor no celular */
+  .logo { height: calc(110px + 1rem); padding: .5rem; }
+  .logo img { height: 110px; transform: none; }
+
+  /* menu compacto */
+  .topo { padding: .5rem; }
+  .menu { gap: .4rem; }
+  .menu a { padding: .35rem .6rem; font-size: .85rem; }
+
+  /* carrossel: 1 produto por vez */
+  .carrossel { gap: .25rem; }
+  .carrossel-janela { margin: 0; padding: .75rem; }
+  .grade > li { flex-basis: 100%; }
+  .seta { width: 2rem; height: 2rem; }
+
+  .slogan { text-align: left; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }  .grade > li { flex-basis: 100%; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 
 /* ---------- Página de produtos detalhada ---------- */
